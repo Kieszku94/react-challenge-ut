@@ -21,7 +21,9 @@ const MinimalSpend = () => {
           min={0}
           max={5000}
           valueLabelDisplay="auto"
-          onChange={(e, value) => setMinimalSpend(value)}
+          onChange={(e, value) => setTimeout(() => {
+            setMinimalSpend(value)
+          }, 1000)}
         />
       </div>
 
