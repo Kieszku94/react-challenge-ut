@@ -14,6 +14,7 @@ const Region = () => {
       <div className="regionDropdown">
         <FormControl sx={{ minWidth: 200 }} size="small">
           <Select value={region} onChange={(e) => setRegion(e.target.value)}>
+            <MenuItem value="All">All</MenuItem>
             <MenuItem value="United States">United States</MenuItem>
             <MenuItem value="Europe">Europe</MenuItem>
             <MenuItem value="APAC">APAC</MenuItem>
