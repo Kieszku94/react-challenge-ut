@@ -1,6 +1,6 @@
-import { getData } from "./data/getData";
+import MinimalSpend from "./components/MinimalSpend/MinimalSpend";
 function App() {
-  return <h1>uTrack</h1>;
+  return <MinimalSpend />;
 }
 
 export default App;
