@@ -12,8 +12,8 @@ const MinimalSpend = () => {
   return (
     <div className="minimalSpendContainer">
       <p className="minimalSpendLabel">Minimal Spend</p>
-      <p className="minimalSpendAmount">{`$${minimalSpend}`}</p>
       <div className="slider">
+        <p className="minimalSpendAmount">{`$${minimalSpend}`}</p>
         <Slider
           color="secondary"
           value={minimalSpend}
