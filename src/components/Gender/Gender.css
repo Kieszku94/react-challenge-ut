@@ -27,3 +27,7 @@
   cursor: pointer;
   opacity: 0.8;
 }
+
+.active {
+  background-color: green;
+}
