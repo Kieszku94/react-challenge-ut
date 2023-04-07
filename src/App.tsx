@@ -11,6 +11,7 @@ import {
 } from "./context/uTrackContext";
 import { getData } from "./data/getData";
 import Table from "./components/Table/Table";
+import Chart from "./components/Chart/Chart";
 
 const data = getData();
 
@@ -51,6 +52,7 @@ function App() {
         <Region />
         <Gender />
       </div>
+      <Chart />
       <Table />
     </div>
   );
