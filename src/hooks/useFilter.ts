@@ -19,5 +19,12 @@ export const useFilter = (): void => {
     setData(data.filter((x) => x.spend >= minimalSpend && x.gender === gender));
   } else if (gender === "All") {
     setData(data.filter((x) => x.spend >= minimalSpend && x.region === region));
+  } else {
+    setData(
+      data.filter(
+        (x) =>
+          x.spend >= minimalSpend && x.region === region && x.gender === gender
+      )
+    );
   }
 };
