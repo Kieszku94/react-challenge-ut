@@ -1,0 +1,14 @@
+.regionContainer {
+  max-width: 200px;
+  font-family: "Quicksand";
+  font-weight: 700;
+  margin-left: 4rem;
+}
+
+.regionLabel {
+  margin-top: 0;
+}
+
+.regionDropdown {
+  margin-top: 1rem;
+}
