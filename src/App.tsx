@@ -4,18 +4,17 @@ import MinimalSpend from "./components/MinimalSpend/MinimalSpend";
 import Gender from "./components/Gender/Gender";
 import Region from "./components/Region/Region";
 import {
-  useData,
   useSetData,
   useMinimalSpend,
   useRegion,
   useGender,
 } from "./context/uTrackContext";
 import { getData } from "./data/getData";
+import Table from "./components/Table/Table";
 
 const data = getData();
 
 function App() {
-  const d = useData();
   const setData = useSetData();
   const minimalSpend = useMinimalSpend();
   const region = useRegion();
@@ -45,15 +44,14 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [minimalSpend, region, gender]);
 
-  useEffect(() => {
-    console.log(d);
-  }, [d]);
-
   return (
     <div className="container">
-      <MinimalSpend />
-      <Region />
-      <Gender />
+      <div className="controlsContainer">
+        <MinimalSpend />
+        <Region />
+        <Gender />
+      </div>
+      <Table />
     </div>
   );
 }
