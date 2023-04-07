@@ -10,18 +10,21 @@ import {
   useRegion,
   useGender,
 } from "./context/uTrackContext";
+import { getData } from "./data/getData";
+
+const data = getData();
 
 function App() {
-  const data = useData();
+  const d = useData();
   const setData = useSetData();
   const minimalSpend = useMinimalSpend();
   const region = useRegion();
   const gender = useGender();
 
   useEffect(() => {
-    if (region === "" && gender === "All") {
+    if (region === "All" && gender === "All") {
       setData(data.filter((x) => x.spend >= minimalSpend));
-    } else if (region === "") {
+    } else if (region === "All") {
       setData(
         data.filter((x) => x.spend >= minimalSpend && x.gender === gender)
       );
@@ -41,6 +44,10 @@ function App() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [minimalSpend, region, gender]);
+
+  useEffect(() => {
+    console.log(d);
+  }, [d]);
 
   return (
     <div className="container">
