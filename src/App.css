@@ -1,5 +1,8 @@
 .container {
-  display: flex;
   max-width: 750px;
   margin: 4rem auto;
+}
+
+.controlsContainer {
+  display: flex;
 }
