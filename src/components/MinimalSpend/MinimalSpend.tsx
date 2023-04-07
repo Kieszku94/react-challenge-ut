@@ -9,6 +9,7 @@ import Slider from "@mui/material/Slider";
 const MinimalSpend = () => {
   const minimalSpend = useMinimalSpend();
   const setMinimalSpend = useSetMinimalSpend();
+
   return (
     <div className="minimalSpendContainer">
       <p className="minimalSpendLabel">Minimal Spend</p>
