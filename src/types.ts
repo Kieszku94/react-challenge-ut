@@ -24,3 +24,9 @@ export type UTrackContextType = {
 export type UTrackContextProviderProps = {
   children: React.ReactNode;
 };
+
+export type ChartData = {
+  monthly: number;
+  cumulative: number;
+  month: string;
+};
