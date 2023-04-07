@@ -11,7 +11,7 @@ const userData = getData();
 const useUTrack = () => {
   const [data, setData] = useState<UserModel[]>(userData);
   const [minimalSpend, setMinimalSpend] = useState<number | number[]>(2500);
-  const [region, setRegion] = useState<string>("");
+  const [region, setRegion] = useState<string>("All");
   const [gender, setGender] = useState<string>("All");
   const [monthly, setMonthly] = useState<number>(0);
   const [cumulative, setCumulative] = useState<number>(0);
@@ -36,7 +36,7 @@ const UTrackContext = createContext<UTrackContextType>({
   setData: (payload: UserModel[]) => {},
   minimalSpend: 2500,
   setMinimalSpend: (payload: number | number[]) => {},
-  region: "",
+  region: "All",
   setRegion: (payload: string) => {},
   gender: "",
   setGender: (payload: string) => {},
