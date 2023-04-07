@@ -1,0 +1,31 @@
+.genderContainer {
+  max-width: 200px;
+  font-family: "Quicksand";
+  font-weight: 700;
+  align-self: flex-start;
+  margin-left: 4rem;
+}
+
+.genderButtonsGroup {
+  margin-top: 2.8rem;
+}
+
+.genderLabel {
+  margin-top: 0;
+}
+
+.genderBtn {
+  text-decoration: none;
+  display: inline-block;
+  background-color: blueviolet;
+  color: #fff;
+  padding: 0.35rem 0.7rem;
+  font-weight: 700;
+  border: 1px solid black;
+  font-size: 0.85rem;
+}
+
+.genderBtn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
