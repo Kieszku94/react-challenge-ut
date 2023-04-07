@@ -1,7 +1,7 @@
 export type UserModel = {
   id: string;
   birthday: number;
-  spend: number;
+  spend: number | number[];
   region: string;
   gender: string;
 };
@@ -9,16 +9,16 @@ export type UserModel = {
 export type UTrackContextType = {
   data: UserModel[];
   setData: (payload: UserModel[]) => void;
-  minimalSpend: Number;
-  setMinimalSpend: (payload: Number) => void;
+  minimalSpend: number | number[];
+  setMinimalSpend: (payload: number | number[]) => void;
   region: string;
   setRegion: (payload: string) => void;
   gender: string;
   setGender: (payload: string) => void;
-  monthly: Number;
-  setMonthly: (payload: Number) => void;
-  cumulative: Number;
-  setCumulative: (payload: Number) => void;
+  monthly: number;
+  setMonthly: (payload: number) => void;
+  cumulative: number;
+  setCumulative: (payload: number) => void;
 };
 
 export type UTrackContextProviderProps = {
