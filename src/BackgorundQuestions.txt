@@ -1,0 +1,10 @@
+1. this.setState({count: this.state.count + 1})
+
+Updating state in this way could cause potential issues, because setState is an asynchronous function and it may combine a group of setState's together hence relying on their values shouldn't be taken into account when calclulating the next state. So the value of this.state.count is the value at the time of making request. A better solution is to call a function when setState gets executed. For example: this.setState((previousState, props) => ({
+    count: previousState.count + 1
+})); 
+
+2.Explain redux to non-technical audience. 
+
+Lest's assume I would like to find out some informations about my great grandfather, when he was born, what his name was etc. My first thought would be to go to my father and ask him about it. When asking him about my great grandfather he told me that my grandfather should know much more about him and suggested I should contact my grandfather. After reaching out to my grandfather I have finally found out some facts about my great grandfather. In order to achieve that I had to ask at first my father and then my grandfather. But there is a much quicker way of achieving my goal. I could use a website called familysearch.org to get an instant information about my great grandfather. I wouldn't have to rely on my father and grandfather to get the information I need. I just need a single source of truth which in this case would be the website I have mentioned. And redux is exactly as this website I can reach out to and get the data I need without third parties involved. 
+
